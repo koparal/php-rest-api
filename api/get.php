@@ -3,9 +3,9 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-include_once __DIR__.'/../config/database.php';
-include_once __DIR__.'/../helpers/helper.php';
-include_once __DIR__.'/../models/Product.php';
+include_once __DIR__ . '/../config/database.php';
+include_once __DIR__ . '/../helpers/helper.php';
+include_once __DIR__ . '/../models/Product.php';
 
 // DB connection
 $database = new Database();
@@ -29,7 +29,7 @@ if ($itemCount > 0) {
         $item = array(
             "product_id" => $row["product_id"],
             "name" => $row["name"],
-            "stock" => $row["stock"],
+            "stock" => (int)$row["stock"],
             "created_date" => $row["created_date"]
         );
 

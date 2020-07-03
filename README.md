@@ -4,7 +4,7 @@
 
 ```code
     private $host = "localhost";
-    private $database_name = "ornektabloadi";
+    private $database_name = "ornekveritabaniadi";
     private $username = "root";
     private $password = "";
 ```
@@ -58,7 +58,7 @@ Not : İsteğe bağlı 2. ve 3. adımları yapmak yerine direk **restapi.sql** d
 ```
 
 ```code
-`POST Request - http://hostname/stocks
+`POST Request` - http://hostname/stocks
 {
     "product_id" : "10",
     "name" : "Test Product 1",
@@ -72,8 +72,7 @@ Not : İsteğe bağlı 2. ve 3. adımları yapmak yerine direk **restapi.sql** d
 {
     "code": 0,
     "msg": "success",
-    "data": [
-        {
+    "data": {
             "product_id": "1",
             "name": "Test Product 1",
             "stock": "100",

@@ -42,7 +42,9 @@ if (!empty($data->product_id) &&
                 $dataArr["msg"] = "success";
                 $dataArr["data"] = [
                     "product_id" => $item->product_id,
-                    "stock" => $item->name,
+                    "name" => $item->name,
+                    "stock" => (int)$item->stock,
+                    "created_date" => $item->created_date,
                 ];
 
                 echo json_encode($dataArr);
